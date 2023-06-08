@@ -1,4 +1,5 @@
 let opcion = 0, ciclo = 0;
+Ejercicio5();
 console.log('PROGRAMA DE MENUS');
 while (ciclo==0){
 alert("Menu Pricipal\n1. Ejercicio 1\n2. Ejercicio 2\n3. Ejercicio 3\n4. Ejercicio 4\n5. Salir\n");
@@ -139,5 +140,45 @@ function opcion4() {
         utilidad  =salario*0.2;
         alert('La utilidad de su salario de ' + salario + " es de: " + utilidad)
     } 
+
+}
+function Ejercicio5() {
+    var ant = 0, pos, num=1, cont=0, sumaImpar = 0, suma = 0;
+    n = parseInt(prompt("Ingrese de que longitud quiere que sea la serie Fibonacci: "));
+    nBuscar = parseInt(prompt("Ingrese el numero que desea buscar en la serie Fibonacci"))
+    console.log(ant );
+    console.log(num);
+    
+    for (let i = 0; i < n; i++) {
+        pos = ant + num;
+        ant = num;
+        num = pos;
+        console.log(pos);
+        if (i ==0) {
+             if (nBuscar != ant ||nBuscar != num) {
+                cont+=2;
+                suma = suma+ ant+pos;
+                if(num%2!=0){
+                    sumaImpar = sumaImpar + num;
+                }
+                    
+        }
+    }
+    if (pos%2!=0) {
+        sumaImpar = sumaImpar+pos;
+    }
+    if (nBuscar != pos) {
+        cont = cont +1;
+    }
+    suma = suma+pos
+}
+if (cont == n+2) {
+    alert("Su numero NO se encuentra en la secuencia fibonacci");
+}
+else{
+    alert("Su numero se encuentra en la secuencia fibonacci");
+}
+alert("La suma de la serie fibonacci es: "+ suma);
+alert("La suma de los numeros impares de la serie fibonacci es: "+ sumaImpar);
 
 }
