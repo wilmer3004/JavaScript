@@ -26,6 +26,11 @@ switch (opcion) {
 }
 }
 
+
+
+
+
+
 function opcion1(){
     var fibonacci = [0,1];
     let suma = 0;
@@ -110,5 +115,29 @@ function opcion3(){
 }
 
 function opcion4() {
-    
+    salario = parseFloat(prompt("Digite su salario mensual: "));
+    antiguedad = parseInt(prompt("Digite su antigüedad en la empresa en años: "));
+    let utilidad = 0;
+
+    if (antiguedad<1 && antiguedad>0) {
+        utilidad  =salario*0.05;
+        alert('La utilidad de su salario de ' + salario + " es de: " + utilidad)
+    } 
+    else if (antiguedad>=1 && antiguedad<2) {
+        utilidad  =salario*0.07;
+        alert('La utilidad de su salario de ' + salario + " es de: " + utilidad)
+    } 
+    else if (antiguedad>=2 && antiguedad<5) {
+        utilidad  =salario*0.1;
+        alert('La utilidad de su salario de ' + salario + " es de: " + utilidad)
+    } 
+    else if (antiguedad>=5 && antiguedad<10) {
+        utilidad  =salario*0.15;
+        alert('La utilidad de su salario de ' + salario + " es de: " + utilidad)
+    } 
+    else if (antiguedad>=10) {
+        utilidad  =salario*0.2;
+        alert('La utilidad de su salario de ' + salario + " es de: " + utilidad)
+    } 
+
 }
